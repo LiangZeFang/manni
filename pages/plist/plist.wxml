@@ -1,0 +1,27 @@
+<view class="product">
+<view class='navs'>
+    <scroll-view scroll-x="true"  class='productmenu'>
+    <!-- <view class="weui-navbar__slider" style="left:30rpx; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);display:{{block}}"></view> -->
+        <block wx:for="{{topicName}}">
+            <text bindtap='topicName' data-id="{{item.topic_id}}" class="{{item.checked =='Y'?'Y':''}}">{{item.topic_name}}</text>
+        </block>    
+            <!-- <text>戒指</text>
+            <text>耳钉/耳环</text>
+            <text>项链/吊坠</text> -->
+    </scroll-view>
+    <view class='jieguo' wx:if="{{sousuo}}">{{sousuo}}</view>
+</view>
+    <view class='productlist'>
+       <view class='item' wx:for="{{product}}">
+            <navigator url='../product/product?pid={{item.product_id}}' hover-class='navigator-hove'>
+                <image src='{{item.cover_img}}'></image>
+                <view class='title'>{{item.title}}</view>
+                <view class='price'>￥{{item.price}}</view>
+            </navigator>
+       </view>
+    </view>
+    <view class="weui-loadmore" hidden="{{isHideLoadMore}}" style='display:{{none}}'>
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips">正在加载</view>
+  </view>
+</view>

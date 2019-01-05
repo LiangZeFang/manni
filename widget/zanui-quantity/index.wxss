@@ -1,0 +1,39 @@
+.zan-quantity {
+  color: #666;
+}
+.zan-quantity view {
+  display: inline-block;
+  padding: 10rpx 0;
+  text-align: center;
+  min-width: 60rpx;
+  box-sizing: border-box;
+  vertical-align: middle;
+  font-size: 22rpx;
+}
+.zan-quantity .zan-quantity__minus {
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+}
+.zan-quantity .zan-quantity__text {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 40rpx;
+  font-size: 22rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.zan-quantity .zan-quantity__plus {
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+}
+
+.zan-quantity--small view {
+  min-width: 36px;
+  line-height: 18px;
+}
+.zan-quantity--small .zan-quantity__text {
+  width: 36px;
+  line-height: 28px;
+  height: 28px;
+}

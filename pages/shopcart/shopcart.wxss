@@ -1,0 +1,94 @@
+page{background:#fff;}
+.page__bd{padding:0;}
+.top_nav{text-align:center;background:#fff;padding:20rpx;font-size:26rpx;border-bottom:1px solid #ccc;}
+.top_nav .flex-item{border-right:1px solid #f2f2f2;}
+.top_nav .flex-item:last-child{border:none;}
+.top_nav .active{font-weight:bold;color:#f31;}
+.order-list{margin-top:0}
+.order-header{color:#aaa;font-size:26rpx;border-bottom:1rpx solid #eee;padding-bottom:10rpx;}
+.order-header .text-order-status{float:right;}
+.order-body{padding:20rpx;padding-bottom: 100rpx;}
+.order-body .order-body_list{position:relative;flex-direction:row;border-bottom:1rpx solid #eee;padding:20rpx 0;margin-bottom:20rpx;display: flex;align-items: center;}
+
+.order-body .order-body_list .order-body_img{display:inline-block;}
+.order-body .order-body_list .order-body_img .pimg{width:203rpx!important;height: 203rpx;display:inline-block;}
+.order-body .order-body_list .order-body_info{padding-top:5rpx;padding-left:20rpx;height:148rpx;flex-direction:column;display:inline-block;margin-top: -40rpx;}
+.order-body .order-body_list .order-body_info .order-body_info_title{-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden;text-overflow:ellipsis;line-height:1.5;font-size: 28rpx;color: #000;font-weight: bold;}
+.order-body .order-body_list .order-body_info .order-body_info_price{width:300rpx;bottom:10rpx;color:#000;font-size:30rpx;padding-top:10rpx;font-weight: bold;margin-right: 80rpx;}
+.order-body_info_num .zan-quantity > view,.order-body_info_num .zan-quantity > input {width: 66rpx;height: 66rpx;line-height: 66rpx; font-size: 38rpx;padding: 0;font-weight: bold;}
+.order-body_info_num .zan-quantity > input{
+    font-size: 30rpx;
+    font-weight: 500;
+}
+.order-body_info_num .zan-quantity {
+    border:2rpx solid #cecece;
+}
+.order-body_info_num .zan-quantity .zan-quantity__minus{
+    border-right: 2rpx solid #cecece;
+}
+.order-body_info_num .zan-quantity .zan-quantity__plus{
+    border-left: 2rpx solid #cecece;
+}
+.order-body .order-body_list .order-body_info .order-body_info_num{bottom:10rpx;text-align:right;font-size:26rpx;color:#5d5d5d;overflow:visible;display:inline-block;}
+.order-body_info_vname{-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden;text-overflow:ellipsis;line-height:2.5;font-size:22rpx;color:#5d5d5d;padding-bottom:16rpx;}
+.vname{padding-right:5rpx;position: relative}
+.vname:last-of-type{
+    padding-left: 96rpx;
+}
+.vname:last-of-type::after{
+    content: '规格：';
+    position: absolute;
+    left: 30rpx;
+    width: 66rpx;
+    height: 34rpx;
+}
+.order-footer{text-align:right;font-size:26rpx;color:#666;}
+.order-footer text{padding-left:30rpx;}
+.order-btn{text-align:right;}
+.btn{overflow:visible;}
+.order-btn .btn{margin:20rpx 0 0 20rpx;}
+.total_price,.election{color:#5d5d5d;font-size:28rpx;padding-right:38rpx;}
+.total_price text{font-size:36rpx;color: #d84848;}
+.election{padding-left: 26rpx;padding-right: 0;}
+.total_num{font-size:22rpx;color:#333;}
+.btn{padding:10rpx 30rpx;}
+.weui-check__hd_in-checkbox{width:70rpx;display:flex;display:-webkit-flex;flex-direction:column;justify-content:center;color: #333}
+.weui-cell{padding:20rpx 10rpx;z-index: 888;display:inline-block;}
+.page__ft{position:fixed;bottom:100rpx;height:100rpx;width:100%;background:#fff;z-index: 999;display: flex;align-items: center;}
+.page__ft .weui-cell__hd{padding-left: 18rpx;}
+.page__ft .checkAll {flex: 1;}
+.page__bd{margin-bottom:118rpx;}
+.editBtn{display:inline-block;right:20rpx;top:10rpx; position: absolute}
+.error_tip{right:10rpx;font-size:20rpx;top:66rpx;background:#fff;padding:5rpx 10rpx;border-radius:5rpx;color:#f31;border:1px solid #F31;}
+
+.iconfont{
+    font-size: 35rpx;
+    color:#2f87ac;
+}
+
+.icon-yuan{
+    color:#212121;
+}
+.button {
+    display: inline-block;
+    padding: 30rpx 80rpx;
+    color: #fff;
+    background-color: #2f87ac;
+    z-index: 999;
+    font-size: 30rpx;
+}
+
+.deleate-btn{
+    position: absolute;
+    right: -16rpx;
+    display: inline-block;
+    padding: 14rpx 30rpx;
+    color:#ccc;
+    top: 6rpx;
+    transform: rotate(45deg);
+    font-size:50rpx;
+    font-weight:200;
+}
+.disable-btn {
+    background: #ccc;
+}

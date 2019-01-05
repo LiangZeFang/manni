@@ -1,0 +1,51 @@
+page{
+    background:#f3f3f3;
+}
+.coupon{
+  padding-left: 30rpx;
+  padding-right: 30rpx; 
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+.couponitem{
+  width: 685rpx;
+  height: 275rpx;
+  margin-bottom: 60rpx;
+  /* background: url('http://gecgoo.img-cn-shenzhen.aliyuncs.com/[2]_c81e728d9d4c2f636f067f89cc14862c/images/b47b29cb4b5a435749b047c532f07dd640.jpg'); */
+  line-height: 275rpx;
+  color: #fdfffe;
+  position: relative;
+  font-weight: lighter;
+  padding: 0;
+  border-radius: 0;
+}
+.price{
+  font-size: 140rpx;
+  margin-right: 20rpx;
+  margin-left: -210rpx;
+}
+.price text{
+  font-size: 48rpx;
+ position: relative;
+ left: 5rpx;
+ font-weight: normal;
+}
+.discount{
+  font-size: 70rpx;
+  position: absolute;
+  top: -25rpx;
+
+}
+.requst{
+  font-size: 40rpx;
+  margin-top: 15rpx;
+}
+.state{
+  position: absolute;
+  line-height: 70rpx;  
+  font-size: 60rpx;
+  width: 120rpx;
+   right: 42rpx;
+   top: 70rpx;
+   color: #2f87ac;
+}

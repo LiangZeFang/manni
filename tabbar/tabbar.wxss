@@ -1,0 +1,46 @@
+.iconf{
+  width:56rpx;
+  height: 56rpx;
+}
+button::after{
+    border:none;
+}
+.tabBar{
+  width:100%;
+  position: fixed;
+  bottom:0;
+  padding-top: 6rpx;
+  padding-bottom: 4rpx;
+  font-size:20rpx;
+  color:#8A8A8A;
+  background: #fff;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999;
+  height: 92rpx;
+}
+.tabBar>button{
+    position:fixed;
+    height:92rpx;
+    background:#fff;
+    font-size: 22rpx;
+    color: #585858;
+    padding: 0;
+    line-height: normal;
+}
+ .tabBar-item{
+  float:left;
+  width:25%;
+  text-align: center;
+  overflow: hidden;
+}
+/*当前字体颜色*/
+.tabBar-item navigator > view.tabBartext{
+  color:#3188ad;
+}
+.tabBar-item navigator > view{
+  color:#585858;
+  font-size: 22rpx;
+}

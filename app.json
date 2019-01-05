@@ -1,0 +1,29 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/product/product",
+        "pages/category/category",
+        "pages/plist/plist",
+        "pages/me/me",
+        "pages/order/order",
+        "pages/msg/msg_auth_fail",
+        "pages/bind/bind_phone",
+        "pages/address/address",
+        "pages/address/add",
+        "pages/pay/pay_result",
+        "pages/pay/pay",
+        "pages/msg/msg_addcart_success",
+        "pages/shopcart/shopcart",
+        "pages/submitorder/submitorder",
+        "pages/collect/collect",
+        "pages/coupon/coupon",
+        "pages/web/web"
+    ],
+   "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "伊索曼妮",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f9f9f9"
+    }
+}

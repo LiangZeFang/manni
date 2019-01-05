@@ -1,0 +1,7 @@
+page{background: #f2f2f2;}
+
+.weui-cells{font-size: 26rpx;}
+.weui-cell::before{left: 0;}
+.weui-vcode-btn{font-size: 28rpx; color: #f31;}
+.weui-cell_vcode_x{padding-top: 5rpx; padding-bottom: 5rpx;}
+.weui-cells__tips{border-bottom: 1px solid #ececec; font-size: 20rpx; color: #aaa; background: #fff; margin-top: 0; padding:10rpx 60rpx;}

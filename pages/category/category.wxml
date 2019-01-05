@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__hd">产品分类</view>
+            <view class="weui-panel__bd">
+                <view wx:if="{{!category}}" style="padding: 50rpx 0; text-align: center;">无任何分类</view>
+                <view class="weui-grids" wx:else>
+                    <block wx:for="{{category}}">
+                        <navigator url="../plist/plist?tid={{item.topic_id}}" data-id="{{item.topic_id}}" class="weui-grid" hover-class="none">
+                            <image class="weui-grid__icon" src="{{item.topic_cover_img}}?x-oss-process=image/resize,w_250" />
+                            <view class="weui-grid__label">{{item.topic_name}}</view>
+                        </navigator>
+                    </block>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="contact-us">
+<view class="kefu">客服</view>
+    <contact-button type="default-light" size="40" open-type="contact" session-from="weapp">
+    </contact-button>
+</view>
+<view class="page footer">{{copyright}}</view>

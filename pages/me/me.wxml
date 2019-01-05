@@ -1,0 +1,77 @@
+<import src="../../tabbar/tabbar.wxml"/>
+<view class="mine">
+  <view class='personal'>
+    <image src='{{userPic}}'></image>
+    <text>{{nickName}}</text>
+  </view>
+  <view class='mineorder'>
+    <view class='ordertitle'>
+     <text>我的订单</text>
+     <navigator url='../order/order?all=all'>查看全部订单></navigator>
+    </view>
+    <view class='orderlist'>
+       <view class='orderlist-item'>
+          <navigator url='../order/order?all=pay'>
+            <image src='../../images/order1.jpg'></image>
+            <view class='biaoti'>待付款</view>
+          </navigator>
+       </view>
+         <view class='orderlist-item'>
+         <navigator url='../order/order?all=sent'>
+          <image src='../../images/order2.jpg'></image>
+          <view class='biaoti'>待发货</view>
+          </navigator>
+       </view>
+         <view class='orderlist-item'>
+         <navigator url='../order/order?all=resv'>
+          <image src='../../images/order3.jpg'></image>
+          <view class='biaoti'>待收货</view>
+          </navigator>
+       </view>
+         <view class='orderlist-item'>
+          <image src='../../images/order4.jpg'></image>
+          <view class='biaoti'>待评价</view>
+       </view>
+         <view class='orderlist-item'>
+          <image src='../../images/order5.jpg'></image>
+          <view class='biaoti'>退货/退款</view>
+       </view>
+    </view>
+  </view>
+<view class='service'>
+   <view class='ordertitle'>
+     <text>我的服务</text>
+    </view>
+    <view class='service-list'>
+     <view class='orderlist'>
+       <view class='orderlist-item'>
+        <navigator url='../coupon/coupon'>
+            <image src='../../images/order6.jpg'></image>
+            <view class='biaoti'>优惠券</view>
+            </navigator>
+       </view>
+         <view class='orderlist-item'>
+         <navigator url='../collect/collect'>
+          <image src='../../images/order7.jpg'></image>
+          <view class='biaoti'>收藏</view>
+          </navigator>
+       </view>
+         <view class='orderlist-item'>
+          <image src='../../images/order8.jpg'></image>
+          <view class='biaoti'>会员</view>
+       </view>
+         <view class='orderlist-item'>
+         <navigator url='' bindtap='bindcallouttap'>
+          <image src='../../images/order9.jpg'></image>
+          <view class='biaoti'>地址</view>
+          </navigator>
+       </view>
+         <view class='orderlist-item'>
+          <image src='../../images/order10.jpg'></image>
+          <view class='biaoti'>储值金</view>
+       </view>
+    </view>
+    </view>
+</view>
+</view>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

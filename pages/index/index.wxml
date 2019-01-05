@@ -1,0 +1,172 @@
+ <import src="/widget/quantity/index.wxml" />
+<import src="../../wxParse/wxParse.wxml" />
+<import src="../../tabbar/tabbar.wxml"/>
+<import src="../../item/product-list.wxml"/>
+<view class='index'>
+  <scroll-view class="index-message">
+  <view class="scrolltxt">
+      <image src='../../images/news.png'></image>
+    <view class="marquee_box">
+      <view class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+        <text>{{information}}</text>
+        <text style="margin-right:{{marquee_margin}}px;"></text>
+        <text style="margin-right:{{marquee_margin}}px;">{{information}}</text>        
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class='search'>
+   <icon type="search" size="17"/>
+   <input type="text" class="weui-search-bar__input" placeholder="{{hotname.custom_synopsis}}" value="{{inputVal}}" bindinput="inputTyping" bindconfirm="search" placeholder-style='font-size:15px'/>
+</view>
+<view class='banner'>
+ <swiper indicator-dots="true"
+  autoplay="true" interval="5000" duration="500" class='index-slide' indicator-active-color="#6db0cd">
+  <block wx:for="{{banner}}">
+    <swiper-item>
+      <navigator url='{{item.banner_url}}' hover-class='navigator-hover'>
+        <image src="{{item.image_url}}" class="slide-image"/>
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<view class='index-btn'>
+   <view class='index-item' wx:for="{{topicList}}">
+      <navigator hover-class='navigator-hover' url='{{item.list_href}}'>
+        <image src='{{item.list_image_url}}'></image>
+        <text>{{item.list_title}}</text>
+      </navigator>
+   </view>
+</view>
+<view class='coupon' wx:if="{{cucoupon}}">
+   <view class='coupon-title'>
+    先领券/后购物
+   </view>
+   <view class='coupon-img'>
+   <button class="{{item.is_use == 'Y'?'actvie':''}}" bindtap='cucoupon' wx:for="{{cucoupon}}" data-id="{{item.coupon_id}}" data-active="{{item.is_use}}" disabled="{{item.is_use=='Y'?true:false}}">
+    <view>
+        <text>优惠券</text>
+        <view class='yhq'><text>￥</text><text>{{item.coupon_off}}</text><text>购满{{item.coupon_threshold}}使用</text></view>
+    </view>
+   </button>
+   </view>
+</view>
+<view class='insert'>
+ <image src='../../images/insert.jpg'></image>
+</view>
+<view style='background-image: url(../../images/bg.jpg);background-size:750rpx 8132rpx;'>
+<view class='fashion one'>
+    <!-- <image src='../../images/bg1.jpg'></image> -->
+    <view class='box'>
+        <view class='content'>
+            <view class='English_title'>{{fashion_name.custom_name}}</view>
+            <view class='Chinese_title' wx:if="{{fashion_name.custom_synopsis}}">
+            <template is="wxParse" data="{{wxParseData:custom_synopsis.nodes}}" />
+            </view>
+            <view class='content_box'>
+                <view class='pearl' wx:for="{{fashion}}">
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='price'>
+                        <text>{{item.list_image_alt}}</text><text>{{item.list_title}}</text>
+                        <view class='title'>{{item.list_desc}}<text>限时秒杀</text></view>
+                    </view>
+                    </navigator>
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='img'>
+                        <image src='{{item.list_image_url}}'></image>
+                    </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='fashion luxury'>
+    <!-- <image src='../../images/bg2.jpg'></image> -->
+    <view class='box'>
+        <view class='content'>
+            <view class='English_title'>{{luxury_name.custom_name}}</view>
+            <view class='Chinese_title' wx:if="{{luxury_name.custom_synopsis}}">
+            <template is="wxParse" data="{{wxParseData:luxury_custom.nodes}}" />
+            </view>
+            <view class='content_box'>
+                <view class='pearl' wx:for="{{luxury}}">
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='price'>
+                        <text>{{item.list_image_alt}}</text><text>{{item.list_title}}</text>
+                        <view class='title'>{{item.list_desc}}<text>限时秒杀</text></view>
+                    </view>
+                    </navigator>
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='img'>
+                        <image src='{{item.list_image_url}}'></image>
+                    </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='fashion new_arrival'>
+    <!-- <image src='../../images/bg3.jpg'></image> -->
+    <view class='box'>
+        <view class='content'>
+            <view class='hot-title' wx:if="{{Newarrival_name.custom_name}}">
+            <template is="wxParse" data="{{wxParseData:Newarrival_custom.nodes}}" />
+            </view>
+            <view class='title'>
+                <view class='Chinese_title'>{{Newarrival_name.custom_link_name}}</view>
+                <view class='English_title'>{{Newarrival_name.custom_synopsis}}</view>
+            </view>
+            <view class='content_box'>
+                <view class='pearl' wx:for='{{Newarrival}}'>
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='price'>
+                        <text>{{item.list_image_alt}}</text><text>{{item.list_title}}</text>
+                        <view class='title'>{{item.list_desc}}<text>限时秒杀</text></view>
+                    </view>
+                    </navigator>
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='img'>
+                        <image src='{{item.list_image_url}}'></image>
+                    </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class='fashion explosive'>
+    <!-- <image src='../../images/bg4.jpg'></image> -->
+    <view class='box'>
+        <view class='content'>
+            <view class='title'>
+                <view class='English_title'>{{Explosive_name.custom_name}}</view>
+                <view class='Chinese_title' wx:if="{{Explosive_name.custom_desc}}"><template is="wxParse" data="{{wxParseData:Explosive_custom.nodes}}" /></view>
+            </view>
+            <view class='content_box'>
+                <view class='pearl' wx:for="{{Explosive}}">
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='price'>
+                        <text>{{item.list_image_alt}}</text><text>{{item.list_title}}</text>
+                        <view class='title'>{{item.list_desc}}<text>热销爆款</text></view>
+                    </view>
+                    </navigator>
+                    <navigator url="{{item.list_href}}" hover-class='navigator-hover'>
+                    <view class='img'>
+                        <image src='{{item.list_image_url}}'></image>
+                    </view>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>
+<view class='hot'>
+   <view class='hot-title' wx:if="{{hotname.custom_name}}"><template is="wxParse" data="{{wxParseData:custom_name.nodes}}" /></view>
+   <template is="productItem" data="{{product}}"></template> 
+</view>
+</view>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

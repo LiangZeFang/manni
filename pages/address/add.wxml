@@ -1,0 +1,81 @@
+<view class="page">
+    <view class="page__bd">
+    <form bindsubmit="submitForm">
+        <view class="weui-panel weui-panel_access">
+            <view class="weui-panel__bd">
+                <view class="weui-cells weui-cells_after-title">
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">收货人</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="name" placeholder="收货人姓名" value="{{name}}"/>
+                        </view>
+                    </view>
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">联系电话</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="phone" type="number" placeholder="联系电话" value="{{phone}}"/>
+                        </view>
+                    </view>
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">配送地区</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <view class="input">
+                                <view class="weui-input" focus="{{focus}}" bindtap="open">{{province}} {{city}} {{county}}</view>
+                                <input class="hide" name="province" value="{{province}}"/>
+                                <input class="hide" name="city" value="{{city}}"/>
+                                <input class="hide" name="area" value="{{county}}"/>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">详细地址</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="address" placeholder="不需要重复填写省市区" value="{{address}}"/>
+                        </view>
+                    </view>
+                    <view class="weui-cell weui-cell_input">
+                        <view class="weui-cell__hd">
+                            <view class="weui-label">邮政编码</view>
+                        </view>
+                        <view class="weui-cell__bd">
+                            <input class="weui-input" name="post" type="number" placeholder="邮政编码,若不知请填 000000" value="{{post}}"/>
+                        </view>
+                    </view>
+                    <input wx:if="{{addressid}}" class="hide" name="id" type="number" value="{{addressid}}"/>
+                </view>
+            </view>
+        </view>
+        <view style="margin-top: 30rpx;" class="bottomBtnLine">
+            <button form-type="submit" class="btn btn-primary btn-block" disabled="{{disabled}}" loading="{{btnload}}">{{btn_do_hanld}}</button>
+        </view>
+    </form>
+    </view>
+</view>
+<view class="page footer">{{copyright}}</view>
+<view class="container">
+<view wx:if="{{condition}}" class="citypicker">
+<picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+<view class="cityheader">
+<view bindtap="open" class="city-cancel">取消</view>
+<view bindtap="open" class="city-true">确定</view>
+</view>
+<picker-view-column>
+<view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+</picker-view-column>
+<picker-view-column>
+<view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+</picker-view-column>
+<picker-view-column>
+<view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+</picker-view-column>
+</picker-view>
+</view>
+</view>

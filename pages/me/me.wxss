@@ -1,0 +1,64 @@
+.personal{
+  width: 100%;
+  background: linear-gradient(#62bfe6, #66c2e9); /* 标准的语法 */
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  color: white;
+  font-size: 34rpx;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+}
+.personal image{
+  width: 145rpx;
+  height: 145rpx;
+ vertical-align: middle; 
+  margin-right: 30rpx; 
+  border-radius: 50%;
+}
+.ordertitle{
+  height: 100rpx;
+  line-height: 100rpx;
+  display: flex;
+  border-bottom: 1px solid #dedede;
+  font-size: 28rpx;
+  color: #535353;
+}
+.ordertitle text{
+  width: 66%;
+  padding-left: 30rpx;
+}
+.ordertitle navigator{
+  padding-right: 30rpx;
+  color: #979797;
+}
+.orderlist image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.orderlist{
+  display: flex;
+  font-size: 24rpx;
+  color: #575757;
+  height: 160rpx;
+  text-align: center;
+  align-items: center;
+  border-bottom: 20px solid #f3f3f3;
+}
+.orderlist-item{
+  width: 150rpx;
+
+}
+.service-list .orderlist{
+  flex-wrap: wrap;
+  height: auto;
+  border:none;
+}
+.service-list .orderlist-item{
+  width: 187.5rpx;
+  border-bottom:1px solid #dedede;
+  padding-bottom: 30rpx;
+  padding-top: 30rpx;
+}
+.service-list .orderlist-item:nth-of-type(5),.service-list .orderlist-item:nth-of-type(6){
+  border-bottom: none;
+}

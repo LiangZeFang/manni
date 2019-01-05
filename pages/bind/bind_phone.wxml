@@ -1,0 +1,32 @@
+<view class="page">
+    <view class="page__bd">
+        <form bindsubmit="submitForm">
+        <view class="weui-cells__title"></view>
+        <view class="weui-cells weui-cells_after-title">
+                <view class="weui-cell weui-cell_input weui-cell_vcode">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">手机号</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="phone" placeholder="请输入手机号" bindblur="mobileInput" />
+                    </view>
+                    <view class="weui-cell__ft">
+                        <view class="weui-vcode-btn" bindtap="getVcode" style="color: {{color}}">{{vcode}}</view>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input weui-cell_vcode weui-cell_vcode_x">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label">验证码</view>
+                    </view>
+                    <view class="weui-cell__bd" style="padding-right: 20rpx;">
+                        <input class="weui-input" name="phonecode" placeholder="请输入验证码" />
+                    </view>
+                </view>
+        </view>
+        <view class="weui-cells__tips">绑定手机获取更多优惠，请完成绑定手机号后操作，下次进入会利用微信授权自动登录</view>
+        <button loading="{{btnload}}" form-type="submit" type="{{btnStyle}}" disabled="{{disabled}}" style="margin: 50rpx; padding: 5rpx; font-size: 26rpx;">立 即 绑 定</button>
+        </form>
+    </view>
+    <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+</view>
+<view class="page footer">{{copyright}}</view>

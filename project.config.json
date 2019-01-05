@@ -1,0 +1,109 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.2",
+	"appid": "wxc215433ba78b92dd",
+	"projectname": "manni",
+	"miniprogramRoot": "./",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": 0,
+					"name": "产品详情",
+					"pathName": "pages/product/product",
+					"query": "pid=4376"
+				},
+				{
+					"id": -1,
+					"name": "订单",
+					"pathName": "pages/submitorder/submitorder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "产品",
+					"pathName": "pages/plist/plist",
+					"query": "tid=556"
+				},
+				{
+					"id": 4,
+					"name": "产品详情",
+					"pathName": "pages/product/product",
+					"query": "pid=1614"
+				},
+				{
+					"id": 5,
+					"name": "p",
+					"pathName": "pages/product/product",
+					"query": "pid=1611"
+				},
+				{
+					"id": 6,
+					"name": "c",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "订单",
+					"pathName": "pages/submitorder/submitorder",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "1",
+					"pathName": "pages/product/product",
+					"query": "pid=1612"
+				},
+				{
+					"id": 9,
+					"name": "产品页",
+					"pathName": "pages/plist/plist",
+					"query": "tid=1214&item=Y&limit=100"
+				},
+				{
+					"id": 10,
+					"name": "优惠券",
+					"pathName": "pages/coupon/coupon",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "待支付",
+					"pathName": "pages/order/order",
+					"query": "all=pay"
+				}
+			]
+		}
+	}
+}
