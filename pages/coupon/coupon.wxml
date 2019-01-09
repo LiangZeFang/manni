@@ -1,8 +1,0 @@
-<view class="coupon">
-    <button class='couponitem' wx:for="{{coupon_list}}" data-active="{{item.is_use}}" disabled="{{item.is_use =='Y'?true:false}}" bindtap='coupon' data-id="{{item.coupon_id}}" style="background:url({{item.is_use == 'Y'?'../../images/xz.jpg':'../../images/wxz.jpg'}});background-size: 100% 100%;">
-      <text class='price'><text>￥</text>{{item.coupon_off}}</text>
-      <text class='discount'>优惠券</text>
-      <text class='requst'>购满{{item.coupon_threshold}}使用</text>
-      <text class='state'>{{item.is_use=='N'?'点击领取':'已领取'}}</text>
-    </button>
-</view>

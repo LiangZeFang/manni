@@ -1,8 +1,0 @@
-/* pages/collect/collect.wxss */
-page{background:#f2f2f2;}
-view {
-    line-height:normal;
-}
-.hot-block {
-    padding-top: 30rpx;
-}

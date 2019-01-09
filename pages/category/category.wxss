@@ -1,5 +1,0 @@
-.weui-panel:nth-child(2){margin-top: -1px;}
-.weui-panel__hd::after{border-bottom: none;}
-.weui-grid:nth-child(3){border-right: none;}
-.weui-grid image{width: 100%; height: 230rpx;}
-.weui-grid__label{color: #999;}

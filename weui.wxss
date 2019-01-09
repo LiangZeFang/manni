@@ -521,7 +521,10 @@ icon {
   color: #999999;
 }
 .weui-msg__opr-area {
-  margin-bottom: 25px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .weui-msg__extra-area {
   margin-bottom: 15px;
